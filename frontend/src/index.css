@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(135deg, #d4e0ff 0%, #ffe1f0 100%);
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+.glass-glow {
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.15),
+              0 0 60px rgba(0, 0, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.glass-glow:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 60px rgba(255, 255, 255, 0.3),
+              0 0 80px rgba(0, 0, 255, 0.2);
+}
+
