@@ -16,7 +16,7 @@ export default function Signup() {
         e.preventDefault();
         
         try{
-            await axios.post("http://localhost:5000/api/auth/signup",{name,email,password});
+            await axios.post("https://mynotesapp-uvk7.onrender.com/api/auth/signup",{name,email,password});
             alert("Signup successful! Please login.");
             navigate("/");
         }

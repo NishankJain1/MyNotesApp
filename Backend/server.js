@@ -23,7 +23,7 @@ mongoose
 
 app.use("/api/auth", authRoutes);
 app.use("/api/notes", noteRoutes);
-app.use(cors({ origin: ["http://localhost:3000"], credentials: false }));
+app.use(cors({ origin: ["*"], credentials: false }));
 
 app.get("/", (req, res) => {
   res.send("Backend + MongoDB connected 🚀");

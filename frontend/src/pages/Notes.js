@@ -12,7 +12,7 @@ export default function Notes() {
 
     const fetchNotes = async () => {
         try {
-            const res = await axios.get("/notes");
+            const res = await axios.get("/api/notes");
             setNotes(res.data);
         } catch (err) {
             console.error(err);
@@ -24,7 +24,7 @@ export default function Notes() {
     const addNote = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("/notes", {title,content});
+            await axios.post("/api/notes", {title,content});
             setTitle("");
             setContent("");
             fetchNotes();
